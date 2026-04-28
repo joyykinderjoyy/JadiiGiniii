@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>supriseee...</title>
+
+<style>
+    body {
+        margin: 0;
+        background: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        margin-top: 20%;
+        cursor: pointer;
+    }
+
+    #jumpscare {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #jumpscare img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+</head>
+
+<body>
+
+<h1 onclick="mulai()">klik di sini yachhh...</h1>
+
+<div id="jumpscare">
+    <img src="https://wide-apricot-xc97zb8pmg.edgeone.app/IMG-20260428-WA0136.jpg" alt="scary">
+</div>
+
+<audio id="sound">
+    <source src="https://www.myinstants.com/media/sounds/scream.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function mulai() {
+    document.querySelector("h1").innerText = "waittt yaaakkkkk...";
+
+    setTimeout(() => {
+        document.getElementById("jumpscare").style.display = "flex";
+        document.getElementById("sound").play();
+    }, 3000); // delay 3 detik
+}
+</script>
+
+</body>
+</html>
